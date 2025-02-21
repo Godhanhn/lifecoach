@@ -12,8 +12,14 @@ app.use(express.json());
 app.use(express.static('.'));
 
 // API配置
-const API_KEY = '2c260a1a-a568-46b2-b05c-91ad1f4493b1';
+const API_KEY = process.env.API_KEY;
 const API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+
+// 检查API密钥是否存在
+if (!API_KEY) {
+    console.error('错误：未设置API_KEY环境变量');
+    process.exit(1);
+}
 
 // 处理聊天请求
 app.post('/chat', async (req, res) => {
