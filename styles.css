@@ -1,0 +1,163 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 页面头部样式 */
+.header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 主要内容区域样式 */
+.main-content {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 聊天容器样式 */
+.chat-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 300px);
+}
+
+/* 消息样式 */
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-content {
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.ai-message .message-content {
+    background-color: #e3f2fd;
+    align-self: flex-start;
+}
+
+.user-message {
+    align-items: flex-end;
+}
+
+.user-message .message-content {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* 输入区域样式 */
+.input-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+}
+
+#userInput {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#userInput:focus {
+    border-color: #4a90e2;
+}
+
+.send-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #357abd;
+}
+
+/* 页脚样式 */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: white;
+    color: #666;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        margin: 1rem auto;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .send-button {
+        width: 100%;
+        padding: 0.8rem;
+    }
+}

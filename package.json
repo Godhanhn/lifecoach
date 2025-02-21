@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "## 项目简介 这是一个基于火山方舟DeepSeek R1 API开发的个人成长辅导网站。通过与AI进行对话，用户可以获得个性化的建议和指导，帮助实现个人成长。",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
